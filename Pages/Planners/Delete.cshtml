@@ -1,0 +1,76 @@
+﻿@page
+@model MeetingPlanner.Pages.Planners.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<main id="main">
+    <div class="breadcrumbs" data-aos="fade-in">
+        <div class="container">
+            <h2>Planner</h2>
+            <p>Delete</p>
+        </div>
+    </div><!-- End Breadcrumbs -->
+    <section id="about" class="about d-flex justify-content-center align-items-center">
+        <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+            <dl class="row">
+                <div class="col-md-6">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Planner.MeetingDate)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Planner.MeetingDate)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Planner.Conducting)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Planner.Conducting)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Planner.OpeningSong)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Planner.OpeningSong)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Planner.SacramentHymn)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Planner.SacramentHymn)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Planner.ClosingSong)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Planner.ClosingSong)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Planner.IntermediateMusic)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Planner.IntermediateMusic)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Planner.OpeningPrayer)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Planner.OpeningPrayer)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Planner.ClosingPrayer)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Planner.ClosingPrayer)
+                    </dd>
+            </dl>
+
+            <form method="post">
+                <input type="hidden" asp-for="Planner.ID" />
+                <input type="submit" value="Delete" class="btn btn-danger" /> |
+                <a asp-page="./Index">Back to List</a>
+            </form>
+        </div>
+    </section>
+</main>

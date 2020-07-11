@@ -1,0 +1,98 @@
+﻿@page
+@model MeetingPlanner.Pages.Planners.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<main id="main">
+    <div class="breadcrumbs" data-aos="fade-in">
+        <div class="container">
+            <h2>Planner</h2>
+            <p>Details</p>
+        </div>
+    </div><!-- End Breadcrumbs -->
+    <section id="about" class="about d-flex justify-content-center align-items-center">
+        <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+            <dl class="row">
+                <div class="col-md-6">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Planner.MeetingDate)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Planner.MeetingDate)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Planner.Conducting)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Planner.Conducting)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Planner.OpeningSong)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Planner.OpeningSong)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Planner.SacramentHymn)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Planner.SacramentHymn)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Planner.ClosingSong)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Planner.ClosingSong)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Planner.IntermediateMusic)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Planner.IntermediateMusic)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Planner.OpeningPrayer)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Planner.OpeningPrayer)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Planner.ClosingPrayer)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Planner.ClosingPrayer)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Planner.Talks)
+                    </dt>
+                    <dd class="col-sm-10">
+                        <table class="table">
+                            <tr>
+                                <th>Speaker</th>
+                                <th>Topic</th>
+                            </tr>
+                            @foreach (var item in Model.Planner.Talks)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Speaker)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Topic)
+                                    </td>
+                                </tr>
+                            }
+                        </table>
+                    </dd>
+                </div>
+            </dl>
+            <div>
+                <a asp-page="./Edit" asp-route-id="@Model.Planner.ID">Edit</a> |
+                <a asp-page="./Index">Back to List</a>
+            </div>
+        </div>
+        
+    </section>
+</main>

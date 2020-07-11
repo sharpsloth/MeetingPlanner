@@ -1,0 +1,47 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+        <h1>Plan it,<br>Print it</h1>
+        <h2>Everything you need to stay organized and produce detailed Sarament meeting planners.</h2>
+        <a asp-area="" asp-page="/Planners/Create" class="btn-get-started">Create New Planner</a>
+    </div>
+</section><!-- End Hero -->
+
+<main id="main">
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts section-bg">
+        <div class="container">
+
+            <div class="row counters">
+
+                <div class="col-lg-3 col-6 text-center">
+                    <span data-toggle="counter-up">1232</span>
+                    <p>Talks</p>
+                </div>
+
+                <div class="col-lg-3 col-6 text-center">
+                    <span data-toggle="counter-up">64</span>
+                    <p>Songs</p>
+                </div>
+
+                <div class="col-lg-3 col-6 text-center">
+                    <span data-toggle="counter-up">42</span>
+                    <p>Speakers</p>
+                </div>
+
+                <div class="col-lg-3 col-6 text-center">
+                    <span data-toggle="counter-up">15</span>
+                    <p>Topics</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Counts Section -->
+    </main>

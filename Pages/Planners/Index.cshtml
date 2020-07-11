@@ -1,0 +1,93 @@
+﻿@page
+@model MeetingPlanner.Pages.Planners.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<main id="main">
+    <div class="breadcrumbs" data-aos="fade-in">
+        <div class="container">
+            <h2>Planner</h2>
+            <p>View All </p>
+        </div>
+    </div><!-- End Breadcrumbs -->
+    <section id="about" class="about d-flex justify-content-center align-items-center">
+        <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>
+                        <a asp-page="Create">Create New</a>
+                    </p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Planner[0].MeetingDate)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Planner[0].Conducting)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Planner[0].OpeningSong)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Planner[0].SacramentHymn)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Planner[0].ClosingSong)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Planner[0].IntermediateMusic)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Planner[0].OpeningPrayer)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Planner[0].ClosingPrayer)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Planner)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MeetingDate)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Conducting)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.OpeningSong)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SacramentHymn)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ClosingSong)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.IntermediateMusic)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.OpeningPrayer)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ClosingPrayer)
+                                    </td>
+                                    <td>
+                                        <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                                        <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                                        <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
